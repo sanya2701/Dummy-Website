@@ -1,0 +1,38 @@
+<div class="ui blue inverted menu">
+  <a class="active item" href="/dashboard">
+    Lessons
+  </a>
+  <a class="item" href="/assignment">
+    Assignment
+  </a>
+  <a class="item">
+    Live streaming
+  </a>
+  <div class="right menu">
+   <a class = "item" href="/users/logout">
+    Logout
+   </a> 
+  </div>
+</div><br/>
+
+<div class="ui container">
+<form class = "ui form" action="/createAssignment" method="POST">
+    <div class="field">
+        <label>Subject Name</label>
+        <input type="text" name="subjectName" placeholder="Subject Name">
+    </div>
+    <div class="field">
+        <label>Chapter Name</label>
+        <input type="text" name="chapterName" placeholder="Chapter Name">
+    </div>
+    <div class="field"> 
+        <label>Chapter Content</label>   
+        <input type="text" name="chapterContent" placeholder="Chapter Content">
+    </div>
+    <div class="field">
+        <label>Deadline</label>
+        <input type="date" name="assignmentDeadline">
+    </div>
+    <button class="ui positive button" type="submit">Add Assignment</button>
+</form>
+</div>

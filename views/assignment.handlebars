@@ -1,0 +1,49 @@
+<div class="ui blue inverted menu">
+  <a class="active item" href="/dashboard">
+    Lessons
+  </a>
+  <a class="item" href="/assignment">
+    Assignment
+  </a>
+  <a class="item">
+    Live streaming
+  </a>
+  <div class="right menu">
+   <a class = "item" href="/users/logout">
+     Logout
+   </a> 
+  </div>
+</div><br/>
+
+<div class="ui container">
+       {{#if success_msg}}
+           <div class="ui positive tiny message">
+                <i class="close icon"></i>
+                {{success_msg}}
+            </div>
+        {{/if}}
+
+{{#if admin}}
+<a href = "/createAssignment">Create Assignment</a><br/>
+{{/if}}
+
+<br/><br/>
+<div class="ui two column centered grid">
+<div class="four column centered row">
+{{#each assignment }}
+    <div class="column">
+      <div class="ui teal raised segment">
+      <a class="ui red ribbon label" href ="assignment/{{this._id}}">{{this.subjectName}}</a><br/>
+       1 chapter | 1 practice test <br/><br/>
+          <div class="ui primary small inverted progress">
+            <div class="bar">
+              <div class="progress">5%</div>
+            </div>
+          </div>
+          Deadline - {{this.assignmentDeadline}}
+      </div>
+    </div>
+{{/each}}
+</div>
+</div>
+</div>

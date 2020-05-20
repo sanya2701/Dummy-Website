@@ -1,0 +1,48 @@
+<div class="ui blue inverted menu">
+  <a class="active item" href="/dashboard">
+    Lessons
+  </a>
+  <a class="item" href="/assignment">
+    Assignment
+  </a>
+  <a class="item">
+    Live streaming
+  </a>
+  <div class="right menu">
+   <a class = "item" href="/users/logout">
+     Logout
+   </a> 
+  </div>
+</div><br/>
+
+<h1>&nbsp;&nbsp;Create Quiz Questions</h1>
+<div class="ui container">
+     {{#if success_msg}}
+           <div class="ui positive tiny message">
+                <i class="close icon"></i>
+                {{success_msg}}
+            </div>
+     {{/if}}
+<form class = "ui form" action="/createQuiz" method="POST">
+    <div class="field">
+        <label>Subject</label>
+        <input type="text" name="questionSubject" placeholder="questionSubject">
+    </div>
+    <div class="field">
+        <label>Question</label>
+        <input type="text" name="questionText" placeholder="Question">
+    </div>
+    <div class="four fields"> 
+        <label>Choices</label>   
+        <div class="field"><input type="text" name="options"></div>
+        <div class="field"><input type="text" name="options"></div>
+        <div class="field"><input type="text" name="options"></div>
+        <div class="field"><input type="text" name="options"></div>
+    </div>
+    <div class="field">
+        <label>Correct Ans</label>
+        <input type="text" name="correctOption">
+    </div>
+    <button class="ui positive button" type="submit">Add Question</button>
+</form>
+</div>

@@ -1,0 +1,52 @@
+<div class="ui blue inverted menu">
+  <a class="active item" href="/dashboard">
+    Lessons
+  </a>
+  <a class="item" href="/assignment">
+    Assignment
+  </a>
+  <a class="item">
+    Live streaming
+  </a>
+  <div class="right menu">
+   <a class = "item" href="/users/logout">
+     Logout
+   </a> 
+  </div>
+</div>
+
+<div class="ui container">
+    <br/>
+    <h2>{{subject.subjectName}}</h2><br/>
+
+    {{#each subject.chapters as |chapter|}}
+    <div class="ui three column grid">
+    <div class="column">
+      <div class="ui orange raised segment">
+      <a class = "ui orange label" href ="#">Chapter - {{chapter.cname}}</a><br/>
+      <h4>{{chapter.ccontent}}</h4>
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui violet raised segment">
+        Chapter Test<br/><br/><br/><br/>
+        <a href="/quiz">Practice Test</a>
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui red raised segment">
+        Chapter Final Test<br/><br/><br/><br/>
+        <div class="right aligned content">
+          <div class="header">
+            <a href="/quiz">Final Chapter Test</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    {{/each}}
+     
+</div>
+
+{{!-- <a href = "/createQuiz">Create Quiz</a><br/>
+<a href = "/quiz">Practice Test</a> --}}

@@ -1,0 +1,41 @@
+<div class="ui blue inverted menu">
+  <a class="active item" href="/dashboard">
+    Lessons
+  </a>
+  <a class="item" href="/assignment">
+    Assignment
+  </a>
+  <a class="item">
+    Live streaming
+  </a>
+  <div class="right menu">
+   <a class = "item" href="/users/logout">
+     Logout
+   </a> 
+  </div>
+</div>
+
+<h3 class="ui teal header">&nbsp;&nbsp;&nbsp;Welcome &nbsp;{{username}}</h3><br/>
+<br/><br/><br/>
+
+<div class="ui container">
+<div class="ui four column relaxed grid">
+{{#each subjects}}
+    <div class="column">
+      <div class="ui teal raised segment">
+      <a class="ui red ribbon label" href ="/subject/{{this._id}}">{{this.subjectName}}</a><br/>
+      <h4>{{this.subjectTagline}}</h4><br/>
+          <div class="ui primary small inverted progress">
+            <div class="bar">
+              <div class="progress">5%</div>
+            </div>
+          </div>
+      </div>
+    </div>
+{{/each}}
+</div>
+</div>
+
+{{!-- <h2>Dashboard</h2>
+Welcome User {{username}}<br/>
+<a href= "/users/logout">Logout</a> --}}

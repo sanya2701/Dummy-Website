@@ -1,0 +1,50 @@
+<div class="ui blue inverted menu">
+  <a class="active item" href="/dashboard">
+    Lessons
+  </a>
+  <a class="item" href="/assignment">
+    Assignment
+  </a>
+  <a class="item">
+    Live streaming
+  </a>
+  <div class="right menu">
+   <a class = "item" href="/users/logout">
+     Logout
+   </a> 
+  </div>
+</div><br/>
+<div class ="ui container">
+<h2>Test</h2>
+<form class="ui form" href="/quiz" method="POST">
+    {{#each questions}}
+        <div class="grouped fields">
+            <label>Ques. {{this.questionText}}</label>
+            <div class="field">
+            <div class="ui radio checkbox">
+                <input type="radio" name="{{this._id}}" value="{{this.options.[0]}}">
+                <label>{{this.options.[0]}}</label>
+            </div>
+            </div>
+            <div class="field">
+            <div class="ui radio checkbox">
+                <input type="radio" name="{{this._id}}" value="{{this.options.[1]}}">
+                <label>{{this.options.[1]}}</label>
+            </div>
+            </div><div class="field">
+            <div class="ui radio checkbox">
+                <input type="radio" name="{{this._id}}" value="{{this.options.[2]}}">
+                <label>{{this.options.[2]}}</label>
+            </div>
+            </div><div class="field">
+            <div class="ui radio checkbox">
+                <input type="radio" name="{{this._id}}" value="{{this.options.[3]}}">
+                <label>{{this.options.[3]}}</label>
+            </div>
+            </div>
+        </div>
+    {{/each}}
+    <button class="ui orange button" type="submit">Submit Quiz</button>
+</form>
+</div>
+
